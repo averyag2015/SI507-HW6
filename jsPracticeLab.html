@@ -32,6 +32,16 @@
 	function handleClick(){
 		alert("hello");
 	}
+
+	function copyFunctionAgain(){
+		document.querySelector('#cheeragain').innerHTML+="O Canada<br>"
+
+	}
+
+	function springText(){
+		alert("March 20, 2019");
+
+	}
 </script>
 <style>
 p{
@@ -64,7 +74,7 @@ p{
 	<ul>
 		<li>Kent State</li>
 		<li>University of Pittsburgh</li>
-		<li>McGill University</li>
+		<li oncopy="copyFunctionAgain()">McGill University</li>
 		<li>California State University Long Beach</li>
 		<li oncopy="copyFunction()">University of Michigan</li>
 	</ul>
@@ -72,7 +82,17 @@ p{
 
 	</div>
 
+	<div id="cheeragain">
+
+	</div>
+
 	<button onclick=handleClick() id="wow-button">Wow</button>
+
+
+
+
+
+	<button onclick=springText() id="spring-button">Spring Equinox 2019</button>
 
 </body>
 </html>
