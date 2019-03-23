@@ -25,12 +25,12 @@ This experience is *not in any way* about becoming an expert JavaScript programm
 
 ### Specifically
 
-Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give. 
+Below are a bunch of questions and indications of things to do. For each indication of something to do with code, there is also an accompanying question to answer or brief explanation to give.
 
 **To complete and submit this assignment, you should:**
 
-* Fork (and clone) this repository
-* Add our instructional team as a collaborator to your fork (see instructions for adding collaborators on Canvas)
+* Fork (and clone) this repository ############# DONE
+* Add our instructional team as a collaborator to your fork (see instructions for adding collaborators on Canvas)  ######### DONE
 * Edit this `README.md` file with answers to the questions/prompts, briefly, using Markdown formatting so that the questions appear in bulletpoints and the answers appear clearly below each respective question, *not* as bulletpoints.
 * Add all names of those who worked on this (as indicated below)
 * Make the changes that are indicated below to each of the `.html` files with JavaScript programs provided. (You'll probably do this concurrently with answering questions)
@@ -46,7 +46,7 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 * In answering questions, assume all of the questions include a *explain briefly* note -- you do NOT have to, and should not, write extended paragraphs. Be as concise as you can and explain in your own words. Don't worry about "whether it's enough" -- just worry about conveying your understanding so you can read it later, or even give it to someone else, and the answers will help/make sense.
 
-* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours. 
+* It is not acceptable to copy and paste answers from the internet and submit them as your own. If you cite things, make sure you provide a citation, including to links. If you get information from a resource and rephrase it so you're basically explaining an idea, that's just fine for an explanatory purpose in this assignment, but you *must* cite any quotes or examples that aren't yours.
 
 * **For grading:** we are grading on...
 	* Following the instructions
@@ -57,13 +57,10 @@ Below are a bunch of questions and indications of things to do. For each indicat
 
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
-* Like this: 
-* **Jackie Cohen (jczetta)**
-* Yea-Ree Chang (cyearee)
-* Ruchi Ookalkar (ruchido)
-* Innocent Obi (innoobi)
-* Zhen Wang (alejwang)
-* etc.
+
+**Avery Gleason (averyag)**
+
+
 
 ## Questions & code instructions
 
@@ -78,26 +75,42 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+A comment in JavaScript starts off with two forward slashes //.
+
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+In order to run JavaScript, we need a function to be defined and to be called. Our JavaScript must be enclosed in a script element, which are <script> </script> brackets.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+There are two functions that seem similar to print. One is alert() and the other is console.log(). Alert seems to print out as message of 'hello' in a pop up box that says, "this page says hello". Where console.log() seems to be printing out "hello in console" directly into the console. I would use alert if I had a message I wanted the user to see. Where printing out in the console seems to be something for a developer or debugging.
+
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+I would have to comment out the line 12 alert("hello").For the new date and time I'ved added the code alert(new Date()).
+
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+This can be done on line 17 in the function displayInformation.  document.querySelector('h1').innerHTML = "Avery Gleason"; will produce it so my name is at the top. This line seems to be saying query the html and whever ever the 'h1' html tag is found replace it with Avery Gleason.
+
 
 * **What does the word `document` represent in this code? Explain briefly.**
+The document in our code seems to be representing the HTML structure  that will be used with the browser. It a way of referencing the HTML that is being used in the broswer. It seems to be it's own type of object.
 
-* **What is happening in line 12 ( 
+
+* **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+####document.querySelect('#items').innerHTML seems to be selecting all of the elements with the ID of items, document.getElementsByTagName('li').length  seem getting all the elements iwth a tag name that is li. Since these are set equal they are being assigned to each other.
+
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+When commenting out body.style.background = 'CCEE00' we can see the background would be white.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+The white border comes from line 39 border: 3px solid #FFFFF, the gray comes from the line above background-color: #etc.  I can update the hex code to get both to be blue.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+First, I made a new function called copyFunctionAgain.  This function was going to query our html and look for  the ID 'cheeragain'and if found, replace with O Canada.  I then edited line 72 to  <li oncopy="copyFuctionAgain()">McGill University</li>, which gives us the interactivity of copying Mcgill have  having O Canada appear. So when McGrill is copied the query for the ID cheeragain begins. The final part was to add a new section where the queried object would live which is line 80 - 82, where id='cheeragain' lives.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -112,10 +125,11 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
+The function handeClick() has an alert with 'hello' writing inside. Meaning when the function is called a pop up box with "hello" will appear to the user. The last part of the code creates the actual button the user sees. When clicked the handleClick() function runs.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
-
+Done!
 
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
