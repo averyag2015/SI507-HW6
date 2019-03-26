@@ -104,7 +104,7 @@ The document in our code seems to be representing the HTML structure that will b
 document.querySelect('#items').innerHTML seems to be selecting all of the elements with the ID of items, document.getElementsByTagName('li').length  seem to be getting all the elements with a tag name that is li. Since these are set equal they are being assigned to each other.
 
 
-* **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+* **What color would the background of this page be <u>if there were no JavaScript in this page</u>?** <br />
 When commenting out body.style.background = 'CCEE00' we can see the background would be white.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.** <br />
@@ -137,19 +137,20 @@ Done!
 
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
-* **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+* **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?** <br />
 The color comes from lines 7 through 12. <style type="text/css" .error{color:red;} .good{color:blue;}. A good valid response will show as blue while an error will show as red.  This code sets the rules of what colors to use for which response. The JavaScript below it writes the logic to determine what type of response is valid or an error.
 
-* **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+* **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)** <br />
 I googled regex=/^[a-zA-Z]+$/. Here is what I learned: This is called a regular expression. They help do pattern matching and checking if certain characters exist within text. Regex is used in the conditional on line 20.  Basically, this line is allowing us to check to see if the word input is only containing values that are acceptable IE alaphbalical letters (not symbols etc)
 
-* **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
-First, python uses white space and indentation to help with conditionals, where JavaScript uses curly brackets.  Python also uses a : where Javascript does not.  JavaScript also uses 'else if' where python uses 'elif'
+* **What's different about the syntax of conditional statements in JavaScript, compared to Python?** <br />
+First, python uses white space and indentation to help organize with conditionals, where JavaScript uses curly brackets.  Python also uses a : where Javascript does not.  JavaScript also uses 'else if' where python uses 'elif'.
 
-* **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+* **What do you think the `10000` refers to in the code `.fadeOut(10000)`?** <br />
+If there is an invalid response our program will say 'Not Valid'. This message will appear but then fade out slowly. The .fadeOut(10000) is what controls the fact our messages fades away and how long it fades for. It makes 'Not Valid' fade out after 10 seconds as it parameter is in miliseconds. The 10000 is how long it will take our error message to fade away.
 
-
-* **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
+* **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:** <br />
+Our program is creating a form where the user puts in data and then this data is determined to be valid or invalid depending on whether it is one word or two. We enter this data in and hit a 'submit' button and then this processes happens. This code at the beginning is giving us that interactivity with the submit button. Basically, when we click on the submit button a certain javascript 'event' begins and something will happen to our HTML due to the act of clicking. In our case, the form will submit data and the logic if it's a valid response or not willr un. 
 
 ```js
 $(document).ready(function(){
