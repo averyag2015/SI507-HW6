@@ -58,8 +58,9 @@ Below are a bunch of questions and indications of things to do. For each indicat
 ### Names of people you have worked with on this assignment
 * List everyone's names and uniqnames who have worked on this assignment with you, **including your own name, but make sure YOUR name is first and bold**
 
-**Avery Gleason (averyag)**
-
+**Avery Gleason (averyag)** <br />
+Cara Canady (first three questions in class) <br />
+Maggie Davidson (first three questions in class) <br />
 
 
 ## Questions & code instructions
@@ -74,43 +75,43 @@ This is what an example answer should look like. If you want to include some cod
 Some JavaScript code
 ```
 
-* **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+* **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**<br />
 A comment in JavaScript starts off with two forward slashes //.
 
 
-* **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+* **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.** <br />
 In order to run JavaScript, we need a function to be defined and to be called. Our JavaScript must be enclosed in a script element, which are <script> </script> brackets.
 
-* **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
-There are two functions that seem similar to print. One is alert() and the other is console.log(). Alert seems to print out as message of 'hello' in a pop up box that says, "this page says hello". Where console.log() seems to be printing out "hello in console" directly into the console. I would use alert if I had a message I wanted the user to see. Where printing out in the console seems to be something for a developer or debugging.
+* **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.** <br />
+There are two functions that seem similar to print. One is alert() and the other is console.log(). Alert seems to print out a message like 'hello' in a pop up box. Where console.log() seems to be printing out" directly into the console. In our code it says "hello in the console". I would use alert if I had a message I wanted the user to see. Where printing out in the console seems to be something for a developer.
 
 
-* **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
-I would have to comment out the line 12 alert("hello").For the new date and time I'ved added the code alert(new Date()).
+* **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...** <br />
+I would have to comment out the line 12 alert("hello").For the new date and time I've added the code alert(new Date()).
 
 
-* **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
-This can be done on line 17 in the function displayInformation.  document.querySelector('h1').innerHTML = "Avery Gleason"; will produce it so my name is at the top. This line seems to be saying query the html and whever ever the 'h1' html tag is found replace it with Avery Gleason.
+* **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.** <br />
+This can be done on line 17 in the function displayInformation.  document.querySelector('h1').innerHTML = "Avery Gleason"; will produce it so my name is at the top. This line seems to be saying query the html and where ever the 'h1' html tag is found replace it with Avery Gleason.
 
 
-* **What does the word `document` represent in this code? Explain briefly.**
-The document in our code seems to be representing the HTML structure  that will be used with the browser. It a way of referencing the HTML that is being used in the broswer. It seems to be it's own type of object.
+* **What does the word `document` represent in this code? Explain briefly.** <br />
+The document in our code seems to be representing the HTML structure that will be used with the browser. It a way of referencing the HTML that is being used in the browser. It seems to be it's own type of object.
 
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
-)? Explain, briefly (<= 2 sentences).**
-####document.querySelect('#items').innerHTML seems to be selecting all of the elements with the ID of items, document.getElementsByTagName('li').length  seem getting all the elements iwth a tag name that is li. Since these are set equal they are being assigned to each other.
+)? Explain, briefly (<= 2 sentences).** <br />
+document.querySelect('#items').innerHTML seems to be selecting all of the elements with the ID of items, document.getElementsByTagName('li').length  seem to be getting all the elements with a tag name that is li. Since these are set equal they are being assigned to each other.
 
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
 When commenting out body.style.background = 'CCEE00' we can see the background would be white.
 
-* **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+* **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.** <br />
 The white border comes from line 39 border: 3px solid #FFFFF, the gray comes from the line above background-color: #etc.  I can update the hex code to get both to be blue.
 
-* **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
-First, I made a new function called copyFunctionAgain.  This function was going to query our html and look for  the ID 'cheeragain'and if found, replace with O Canada.  I then edited line 72 to  <li oncopy="copyFuctionAgain()">McGill University</li>, which gives us the interactivity of copying Mcgill have  having O Canada appear. So when McGrill is copied the query for the ID cheeragain begins. The final part was to add a new section where the queried object would live which is line 80 - 82, where id='cheeragain' lives.
+* **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?** <br />
+First, I made a new function called copyFunctionAgain.  This function is going to query our html and look for  the ID 'cheeragain'and if found, replace with O Canada.  I then edited line 72 to  <li oncopy="copyFuctionAgain()">McGill University</li>r. So when McGrill is copied the query for the ID cheeragain begins. The final part was to add a new section where the queried object would live which is line 80 - 82, where id='cheeragain' lives.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -125,7 +126,7 @@ function handleClick(){
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
 
-The function handeClick() has an alert with 'hello' writing inside. Meaning when the function is called a pop up box with "hello" will appear to the user. The last part of the code creates the actual button the user sees. When clicked the handleClick() function runs.
+The function handeClick() has an alert with 'hello' writing inside. Meaning when the function is called a pop up box with "hello" will appear to the user. The last part of the code creates the actual button the user sees. When clicked, the handleClick() function runs.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
@@ -137,12 +138,16 @@ Done!
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+The color comes from lines 7 through 12. <style type="text/css" .error{color:red;} .good{color:blue;}. A good valid response will show as blue while an error will show as red.  This code sets the rules of what colors to use for which response. The JavaScript below it writes the logic to determine what type of response is valid or an error.
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+I googled regex=/^[a-zA-Z]+$/. Here is what I learned: This is called a regular expression. They help do pattern matching and checking if certain characters exist within text. Regex is used in the conditional on line 20.  Basically, this line is allowing us to check to see if the word input is only containing values that are acceptable IE alaphbalical letters (not symbols etc)
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+First, python uses white space and indentation to help with conditionals, where JavaScript uses curly brackets.  Python also uses a : where Javascript does not.  JavaScript also uses 'else if' where python uses 'elif'
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
